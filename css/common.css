@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+.row { max-width: 1920px; margin: 0 auto; padding: 0; }
+
+/* header */
+#header { height: 900px; 
+    background: url(../img/main_hero_img1.jpg);
+}
+#header > .row { 
+    width: 100%; height: 90px; border-bottom: 1px solid rgba(255,255,255,0.25);
+    z-index: 9999999;
+    position: fixed;
+    transition: all 0.2s;
+    /* position: relative; z-index: 9;  */
+}
+#header h1 { width: 200px; height: 200px; padding: 30px 20px; }
+#header #nav { position: absolute; top: 2%; left: 30%;
+    font-size: 18px; color: #fff; padding-top: 20px;
+}
+#header #nav .depth1 > li { float: left; position: relative; 
+    text-align: center;
+}
+#header #nav .depth1 > li > a { display: block; 
+    padding: 20px 40px;
+}
+#header #nav .depth1 > li:hover > a { color: green; }
+#header .depth2 { position: absolute; top: 100%; left: 0;
+    width: 100%; 
+    color: #fff; background: #555;
+    text-align: center; 
+    font-size: 14px;
+    display: none;
+}
+#header .depth2 a { display: block; border-bottom: 1px solid #666;
+    transition: all 0.5s;
+}
+#header .depth2 > li { display: none;
+    position: absolute; top: 100%; left: 0;
+    width: 100%; 
+    color: #fff; background: #555;
+    
+    text-align: center;
+    font-size: 14px; 
+}
+#header #nav .depth2 > li:hover > a { display: block; background: #00529b; 
+    color: #ccb193; }
+
+#header #nav .depth2 li a { display: block; padding: 10px 20px; 
+    border-bottom: 1px solid #999; 
+}
+
+#header .depth2 li:last-child a { border-bottom: none; }
+
+
+#header .loginbox { font-size: 17px; color: #fff; 
+    margin-right: 25px;
+    height: 90px; right: 0; top: 50%;
+    position: absolute;
+    z-index: 999999999;
+}
+#header .loginbox li { display: inline-block; 
+    position: relative;
+}
+
+
+#nav .title { color: #fff; }
+#nav .title span { font-size: 20px; }
+
+#section .article1 img { width: 100%; 
+    display: block;
+}
+
+
+
+
+/* footer */
