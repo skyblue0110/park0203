@@ -16,6 +16,7 @@
         transition: all 0.5s;
     }
     #header.on .close { right: 10px; }
+    #header.on #nav { right: 0; }
     #header #nav { position: fixed; 
         right: -100%; width: 100%; 
         top: 0%; bottom: 0%;
@@ -26,12 +27,10 @@
         display: block; transition: all 0.3s;
         
     }
-    #header.on #nav { right: 0; }
     #header #nav .depth1 {
         position: absolute; right: 0; top: 0;
         width: 200px; height: 100%; overflow-y: auto;
-        /* background: #fff; */
-        color: #fff;
+        background: #fff;
         padding-top: 50px;
     }
 

@@ -50,14 +50,16 @@
 /* section의 article2 구역 */
 .article2 { padding: 10px 0; }
 .article2 .row { position: relative; }
-.article2 h2 { font-size: 36px;
+.article2 .row h2 { font-size: 36px;
     line-height: 42px; font-weight: 700;
     padding: 80px 0 10px; text-align: center; 
 }
-.article2 p { font-size: 18px; 
-    line-height: 30px; 
+.article2 .row p { font-size: 18px; color: #949494;
+    line-height: 30px; font-weight: bold;
     padding-top: 10px; padding-bottom: 30px; 
-    text-align: center; }
+    text-align: center; 
+}
+.article2 h3 { font-size: 30px; font-weight: 500; }
 .article2 ul li { height: 300px;
     float: left; width: 20%;
     margin-right: 1.3333%;
@@ -65,6 +67,7 @@
     background-position: center;
     position: relative;
 }
+.article2 ul li p { font-weight: 100; }
 .article2 ul li .imgbox { display: block; }
 .article2 li:hover::before { opacity: 1; }
 .article2 li:nth-child(1) { background-image: url(../img/main_about_img1.jpg); }
