@@ -7,6 +7,7 @@
     #header .open { display: block;
         position: absolute; top: 50%; transform: translateY(-50%);
         right: 10px; font-size: 30px;
+        color: #fff;
     }
     #header.on .open { display: none; }
     #header .close { display: block;
@@ -15,6 +16,43 @@
         transition: all 0.5s;
     }
     #header.on .close { right: 10px; }
-    #header #nav { position: fixed; top: 2%; left: 30%;
-        font-size: 18px; color: #fff; padding-top: 20px; }
+    #header #nav { position: fixed; 
+        right: -100%; width: 100%; 
+        top: 0%; bottom: 0%;
+        transform: translateY(0%); 
+        font-size: 18px; color: #1e1e1e; 
+        z-index: 999999;
+        background: rgba(0,0,0,0.5);
+        display: block; transition: all 0.3s;
+        
+    }
+    #header.on #nav { right: 0; }
+    #header #nav .depth1 {
+        position: absolute; right: 0; top: 0;
+        width: 200px; height: 100%; overflow-y: auto;
+        /* background: #fff; */
+        color: #fff;
+        padding-top: 50px;
+    }
+
+    #header #nav .depth1 > li { float: none; position: relative; }
+    #header #nav .depth1 > li > a { display: block;
+        padding: 20px 0px;
+        text-align: center;
+    }
+    #header .depth2 { position: static; top: 100%; left: 0;
+        width: 100%;
+        color: #fff; background: #555;
+        text-align: center;
+        font-size: 14px;
+        display: none;
+    }
+    #header .loginbox { padding-right: 30px; }
+
+
+    /* footer 구역 */
+    #footer .info span { padding: 0px 20px;
+        display: block;
+    }
+
 }
