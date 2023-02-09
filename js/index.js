@@ -16,3 +16,5 @@ $('.article1 .plpa i').on('click', function(){
         $(this).removeClass('fa-pause').addClass('fa-pause')
     }
 })
+
+

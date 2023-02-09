@@ -2,7 +2,7 @@
 // 테스트 상황(윈도우 넓이 조절)에서 생기는 오류를 해결하기 위한 코드
 var deviceSize = 1024
 function scrollox(status){
-    4('html').css({
+    $('html').css({
         overflowY:status
     })
     return $('html').width()
@@ -15,13 +15,14 @@ if (scD>0) {
 }
 function init(){
     let ww = $(window).width()
-    if (ww>deviceSize) {
+    if (ww>deviceSize && !$('html').hasClass('pc') ) {
         $('html').addClass('pc').removeClass('mobile')
-    } else {
+        location.reload()
+    } else if(ww<=deviceSize && !$('html').hasClass('mobile') ){
         $('html').addClass('mobile').removeClass('pc')
+        location.reload()
     } 
 }
-init()
 $(window).on('resize', function(){
     init()
 })
@@ -29,21 +30,40 @@ $(window).on('resize', function(){
 
 
 var ww = $(window).width()
-if (ww>1024) {
+if (ww>deviceSize) {
     $('html').addClass('pc')
 } else {
     $('html').addClass('mobile')
 }
 
-$('#header .open').on('click', function(){
-    $(this).next().stop().slideToggle()
+
+
+$('#header .open').click(function(){
+    $('#header').addClass('on')
+})
+$('#header .close').click(function(){
+    $('#header').removeClass('on')
 })
 
-$('#nav .depth1 > li').on('mouseover mouseout', function(){
-    if ( $('html').hasClass('pc') ) {
-        $(this).find('.depth2').stop().slideToggle()
+$('#header #nav .depth1 > li > a').on('click', function(){
+    if ( $('html').hasClass('mobile') && $(this).next().is('.depth2') ) {
+        $(this).next().stop().slideToggle()
+        return false
     }
 })
+
+
+$('#header #nav .depth1 > li').on('mouseover', function(){
+    if ( $('html').hasClass('pc') ) {
+        $(this).find('.depth2').stop().slideDown()
+    }
+})
+$('#header #nav .depth1 > li').on('mouseout', function(){
+    if ( $('html').hasClass('pc') ) {
+        $(this).find('.depth2').stop().slideUp()
+    }
+})
+
 
 $('#nav .depth1 > li > button').on('click', function(){
     if ( $('html').hasClass('mobile') ) {

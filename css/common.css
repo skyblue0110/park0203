@@ -1,27 +1,25 @@
 @charset "utf-8";
 
-.row { max-width: 1920px; margin: 0 auto; padding: 0; }
+.row { max-width: 1170px; margin: 0 auto; padding: 0 10px; }
 
 /* header */
-#header { height: 900px; 
-    background: url(../img/main_hero_img1.jpg);
-}
-#header > .row { 
-    width: 100%; height: 90px; border-bottom: 1px solid rgba(255,255,255,0.25);
+#header {  border-bottom: 1px solid rgba(255,255,255,0.25);
     z-index: 9999999;
-    position: fixed;
-    transition: all 0.2s;
-    /* position: relative; z-index: 9;  */
+    position: fixed; top: 0; left: 0; width: 100%;
+    transition: all 0.2s;}
+#header > div.inner { 
+    position: relative;  height: 90px;
 }
-#header h1 { width: 200px; height: 200px; padding: 30px 20px; }
+#header h1 { width: 200px; padding: 30px 20px; }
 #header .open { display: none; }
 #header .close { display: none; }
-#header #nav { position: absolute; top: 2%; left: 30%;
-    font-size: 18px; color: #fff; padding-top: 20px;
+#header #nav { position: absolute; top: 50%; right: 20%;
+    transform: translateY(-50%); width: 60%;
+    font-size: 18px; color: #fff;
 }
-#header #nav .depth1 > li { float: left; position: relative; }
+#header #nav .depth1 > li { float: left; position: relative; width:20%; text-align: center; }
 #header #nav .depth1 > li > a { display: block; 
-    padding: 10px 40px; }
+    padding: 34px 40px; }
 #header #nav .depth1 > li:hover > a { color: burlywood; }
 #header .depth2 { position: absolute; top: 100%; left: 0;
     width: 100%; 
@@ -30,7 +28,7 @@
     font-size: 14px;
     display: none; 
 }
-#header .depth2 a { 
+#header .depth2 li a { 
     padding: 18px 0;
     transition: all 0.5s;
 }
@@ -38,7 +36,6 @@
     width: 100%; 
     color: #fff; background: #555;
     border-bottom: 1px solid #666;
-    
     text-align: center;
     font-size: 14px; 
 }
@@ -55,12 +52,13 @@
 
 #header .loginbox { font-size: 17px; color: #fff; 
     margin-right: 25px;
-    height: 90px; right: 0; top: 50%;
+     right: 0;
     position: absolute;
+    top: 50%;transform: translateY(-50%);
     z-index: 999999999;
 }
 #header .loginbox li { display: inline-block; 
-    position: relative;
+ 
 }
 
 

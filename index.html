@@ -18,7 +18,13 @@
 <body>
 
     <header id="header">
-        <div class="row">
+        <div class="inner">
+            <div class="loginbox">
+                <ul>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                </ul>
+            </div>
             <h1><a href="index.html"><img src="./img/onepixel studio.svg" alt="onepixel studio"></a></h1>
             <div class="open">
                 <span class="blind">메뉴열기</span>
@@ -29,16 +35,16 @@
                     <li>
                         <a href="#">COMPANY</a>
                         <ul class= "depth2">
-                            <li><a href="#">회사소개</a></li>
-                            <li><a href="#">연혁</a></li>
-                            <li><a href="#">오시는 길</a></li>
+                            <li><a href="#none">회사소개</a></li>
+                            <li><a href="#none">연혁</a></li>
+                            <li><a href="#none">오시는 길</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#">BUSINESS</a>
                         <ul class="depth2">
-                            <li><a href="#">사업소개</a></li>
-                            <li><a href="#">사업분야</a></li>
+                            <li><a href="#none">사업소개</a></li>
+                            <li><a href="#none">사업분야</a></li>
                         </ul>
                     </li>
                     <li>
@@ -69,12 +75,6 @@
             <div class="close">
                 <span class="blind">메뉴닫기</span>
                 <i class="fa-solid fa-times"></i>
-            </div>
-            <div class="loginbox">
-                <ul>
-                    <li><a href="#">로그인</a></li>
-                    <li><a href="#">회원가입</a></li>
-                </ul>
             </div>
         </div>
     </header>
@@ -186,7 +186,7 @@
     </section>
     
 
-    <footer id="footer">
+    <footer id="footer" style="display: none;">
         <div class="row">
             <div class="sns">
                 <a href="#none"><i class="fab fa-instagram"></i><span class="blind">인스타그램</span></a>

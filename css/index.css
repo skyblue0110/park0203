@@ -18,8 +18,10 @@
 #section .article1 .slide_text p { font-size: 18px; 
     line-height: 30px; 
     padding-top: 30px; padding-bottom: 20px; }
-.article1 .slick-arrow {
-    position: absolute; top: 50%; transform: translateY(-50%);
+
+
+.article1 .slick-arrow { position: absolute; bottom: 400px; 
+    transform: translateY(-50%);
     font-size: 70px; color: #fff; border: none;
 }
 .article1 .slick-prev { left: 50px; z-index: 9999; }
@@ -28,8 +30,6 @@
     width: 100%; text-align: center;
 }
 .article1 .slick-dots li { display: inline-block; margin: 0 5px;
-    width: 94px; height: 2px; background: rgba(0,0,0,1);
-    position: relative;
 }
 .article1 .slick-dots li button { border: none; 
     display: none;
