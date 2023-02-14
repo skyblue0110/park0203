@@ -27,6 +27,36 @@ $(window).on('resize', function(){
     init()
 })
 
+$(window).on('load', function(){
+
+    let count = 0;
+    let timer = setInterval(add, 25)
+
+    function add() {
+        count++
+        if (count>=100) {
+            clearInterval(timer)
+            $('.introAni').animate({
+                left:'-100%'
+            }, 500, function(){
+                $(this).hide()
+            })
+        }
+        $('.introAni div').eq(1).text(count+'%')
+    }
+
+
+    $('html').animate({
+        scrollTop:0
+    }, 100)
+
+    let imgh = ($('.slide .img').height() / 2) - 35
+    $('.article1 .slick-arrow').css({
+        top:'0%',
+        transform:`translateY(${imgh}px)`,
+    })
+})
+
 
 
 var ww = $(window).width()
