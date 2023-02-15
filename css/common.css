@@ -74,6 +74,13 @@ a { text-decoration: none; }
 
 
 /* footer */
+#footer { padding: 45px 0 60px; 
+    text-align: center;
+    background-color: #31353e;
+}
+#footer .sns { font-size: 20px; color: #777; padding-bottom: 45px; }
+#footer .info span { color: #fff; }
+#footer .info p { color: #777; }
 
 /* intro 애니메이션 스타일 */
 /* .introAni { position: fixed; top: 0; left: 0; bottom: 0; width: 100%; 
